@@ -1,0 +1,91 @@
+<% include layout %>
+<div class="container" style="background-color: #C0C0C0">
+
+
+
+  <div class="myHeader">
+    <h1>
+      Login
+    </h1>
+  </div>
+
+
+  <!-- LOGIN FORM -->
+
+
+  <img src="../../images/login_logo.png" class="center"/>
+
+  <div id="quotescointainer">
+    <div id="quotesleft">
+      <a href="/register">
+        <img src="../../images/userLog_icon.png" class="center"/>
+      </a>
+    </div>
+    <div id="quotescenter">
+      <img src="../../images/or.png" class="center" height="50" class="center"/>
+    </div>
+
+    <div id="quotesright">
+      <a href="/">
+        <img src="../../images/driverLogActive_icon.png" class="center" />
+      </a>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <form action="/login" method="post">
+
+
+      <!-- show any messages that come back with authentication -->
+      <% if (message.length > 0) { %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+      <% } %>
+
+      <div class="col-sm-6 col-sm-offset-3">
+        <input type="text"  class="form-control" name="username" placeholder="Username"/>
+      </div>
+      <div class="col-sm-6 col-sm-offset-3">
+        <input type="password" class="form-control" name="password" placeholder="password"/>
+      </div>
+      <div class="col-sm-6 col-sm-offset-3">
+        &nbsp;&nbsp;
+      </div>
+
+      <div class="col-sm-6 col-sm-offset-3">
+        <button type="submit" class="btn btn-info btn-block">Login</button>
+      </div>
+
+      <div class="col-sm-6 col-sm-offset-3">
+        &nbsp;&nbsp;
+      </div>
+
+
+
+    </form>
+
+
+    <form action="/signup" method="get">
+      <div class="col-sm-6 col-sm-offset-3">
+        <button type="submit" class="btn btn-block btn-warning">Register</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-6 col-sm-offset-3">
+
+    <p align="center">
+      Or go <a href="/">home</a>
+    </p>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+

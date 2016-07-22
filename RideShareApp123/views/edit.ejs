@@ -1,0 +1,13 @@
+﻿<% include layout %>
+
+Edit User details
+
+<form action="/update" method="post">
+<input type="text" name="fname" id="fname" class="form-control input-sm floatlabel" value = '<%= userDetails[0].fname %>'>
+<input type="text" name="lname" id="lname" class="form-control input-sm" value = '<%= userDetails[0].lname %>'>
+<input type="text" name="username" id="username" class="form-control input-sm" value = '<%= userDetails[0].username %>'>
+<input type="email" name="email" id="email" class="form-control input-sm" value = '<%= userDetails[0].email %>'>
+<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+
+<input type="submit" value="Update" class="btn btn-info btn-block">
+</form>
